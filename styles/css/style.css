@@ -118,19 +118,19 @@ footer {
           right: 0;
           margin-top: 5px;
           font-size: 13px; }
-        .blog .blog__content article .blog__meta .blog__atitle {
-          margin-top: 50px;
-          font-size: 20px;
-          font-weight: bold; }
-          .blog .blog__content article .blog__meta .blog__atitle a {
-            color: #9A7575; }
-        .blog .blog__content article .blog__meta .blog__desc {
-          margin-top: 20px;
-          font-size: 13px;
-          color: #333333; }
-          .blog .blog__content article .blog__meta .blog__desc a {
-            margin-top: 10px;
-            color: #333333; } }
+      .blog .blog__content article .blog__atitle {
+        margin-top: 50px;
+        font-size: 20px;
+        font-weight: bold; }
+        .blog .blog__content article .blog__atitle a {
+          color: #9A7575; }
+      .blog .blog__content article .blog__desc {
+        margin-top: 20px;
+        font-size: 13px;
+        color: #333333; }
+        .blog .blog__content article .blog__desc a {
+          margin-top: 10px;
+          color: #333333; } }
 
 /************************
 * 初期設定

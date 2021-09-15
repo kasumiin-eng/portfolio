@@ -85,24 +85,24 @@ $sp: 767px;  // スマホ
                     margin-top:5px;
                     font-size: 13px;
                 }
-                .blog__atitle {
-                    margin-top: 50px;
-                    font-size: 20px;
-                    font-weight: bold;
-                    a {
-                        color: #9A7575;
-                    }
+            }
+            .blog__atitle {
+                margin-top: 50px;
+                font-size: 20px;
+                font-weight: bold;
+                a {
+                    color: #9A7575;
                 }
-                .blog__desc {
-                    margin-top: 20px;
-                    font-size: 13px;
+            }
+            .blog__desc {
+                margin-top: 20px;
+                font-size: 13px;
+                color: rgb(51, 51, 51);
+                a {
+                    margin-top: 10px;
                     color: rgb(51, 51, 51);
-                    a {
-                        margin-top: 10px;
-                        color: rgb(51, 51, 51);
-                    }
                 }
-        }
+            }
         
     }
 }
