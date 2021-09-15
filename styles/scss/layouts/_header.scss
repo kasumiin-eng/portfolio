@@ -1,0 +1,40 @@
+/*******************
+  * front header 
+  *******************/
+  .header{
+    position: fixed;
+    top:0;
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+    padding: 40px 40px;
+    background: #EDD5D5;
+    
+    &__logo {
+        display: flex;
+        a {
+          color: #9A7575;
+        }
+      }
+    &__navi {
+      display: flex;
+      li:not(:last-child) {
+        margin-right: 14px;
+      }
+      a {
+        color: #9A7575;
+        
+        .header__navi--jpn {
+          font-size: 18px;
+          font-weight: bold;
+        }
+        .header__navi--eng {
+          font-size: 12px;
+          text-align: center;
+        }
+      }
+    }
+  }

@@ -1,0 +1,333 @@
+@charset "utf-8";
+@import "_variables.scss";
+
+@import "layouts/_header.scss";
+@import "layouts/_footer.scss";
+
+@import 'config/_responsive.scss';
+/************************
+* 初期設定
+************************/
+body{
+    font-family: source-han-sans-japanese, sans-serif, a-otf-ud-shin-go-pr6n, sans-serif, dnp-shuei-mgothic-std, sans-serif, kozuka-gothic-pr6n, sans-serif, kozuka-gothic-pro, sans-serif;
+    font-weight: 500;
+    letter-spacing : 0.04em;
+    -webkit-font-smoothing: antialiased;
+    word-break: break-word;
+    box-sizing: border-box; 
+    
+  }
+  a{
+    display: block;
+    text-decoration: none;
+  }
+  img{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+$pc: 768px; // PC
+@mixin pc {
+    @media (min-width: ($pc)) {
+        @content;
+    }
+}
+  
+  /*******************
+  * front main top
+  *******************/
+  .top {
+    background: url(../../img/top-background.svg);
+      &__content {
+          
+          height: 785px;
+        
+          &--txt {
+              color: #9A7575;
+              line-height: 1.4em;
+              font-size: 40px;
+              padding: 240px 30px 160px 30px;
+              width: 60%;
+          }
+          &--btn{
+            border-radius: 20px;
+            border: 2px solid #DEB8B8;
+            color: #9A7575;
+            text-align: center;
+            width: 150px;
+            overflow: hidden;
+            &:hover {
+              color: white;
+              background: #9A7575;
+              border: 2px solid #9A7575;
+            }
+            
+            a {
+              position: relative;
+              color: #9A7575;
+              font-weight: bold;
+              padding: 16px 0;
+              &:hover {
+                color: white;
+              }
+              
+            }
+          }
+          
+      }
+  }
+  /*******************
+  * front main concept
+  *******************/
+  .concept {
+    background: #FAFAFA;
+    height: 600px;
+    padding: 100px 0;
+    h2 {
+      text-align: center;
+      color: #9A7575;
+      font-size: 40px;
+      margin: 10px 0px 10px 0px;
+      padding: 40px 0;
+    }
+    &__title::before {
+      content: 'Concept';
+      display: block;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 80px;
+      color: #EDD5D5;
+    }
+    &__message {
+        line-height: 1.4em;
+        text-align: center;
+    }
+  }
+  
+  /*******************
+  * front main works
+  *******************/
+  .works {
+    height: 750px;
+    padding: 100px 0;
+    
+    h2 {
+      color: #9A7575;
+      font-size: 40px;
+      width: 80%;
+    }
+    &__title::after {
+        content: 'Works';
+        display: block;
+        font-family: 'Noto Serif JP', serif;
+        font-size: 80px;
+        color: #EDD5D5;
+        writing-mode: vertical-rl;
+        float: left;
+        
+    }
+    &__list {
+      
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        margin-top: 40px;
+      
+      
+      @include pc{
+        li { 
+            width: 20%;
+          
+        }
+      };
+    }
+  }
+  
+  /*******************
+  * front main about
+  *******************/
+  .about {
+    height: 850px;
+    background: #FAFAFA;
+  
+    h2 {
+        position: absolute;
+        color: #9A7575;
+        font-size: 40px;
+        margin: 40px 240px 40px auto;
+        padding: 80px 0;
+        width: 80%;
+        text-align: right;
+        
+    }
+    &__title::after {
+      float: right;
+      width: 80%;
+      content: 'About Me';
+      display: block;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 80px;
+      color: #EDD5D5;
+      writing-mode: vertical-rl;
+  }
+      &__si {
+      height: 300px;
+      margin-top: 200px;
+      padding-top: 200px;
+          &--img {
+            background: url(../../img/aboutme.jpg) center/cover no-repeat; 
+            height: 400px;
+            width: 20%;
+          }
+          &--txt {
+            color: #4b4b4b;
+            width: 15%;
+            
+            dl {
+              padding-top: 50px;
+              dt {    
+                float: left;
+                font-size: 21px;
+                font-weight: bold;
+              }
+              dd {
+                font-size: 14px;
+                margin-left: 180px;
+                
+              }
+            }
+          }
+      }
+  }
+  /*******************
+  * front main blog
+  *******************/
+  @include pc {
+  .blog {
+    height: 850px;
+    h2 {
+      text-align: center;
+      color: #9A7575;
+      font-size: 40px;
+      margin: 40px 0px 10px 0px;
+      padding: 100px 0;
+    }
+    &__title::before {
+      content: 'Blog';
+      display: block;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 80px;
+      color: #EDD5D5;
+    }
+   
+    &__content {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+    article {
+        width: 32%;
+        .blog__pic {
+        }
+        .blog__meta {
+            position: relative;
+            .post-categories {
+                position: absolute;
+                left: 0;
+                border: 1px solid;
+	              border-color: #DEB8B8;
+                border-radius: 3px;
+          
+            a {
+                color: #DEB8B8;
+                font-size: 13px;
+                padding: 8px;
+              }
+            }
+        .blog__time {
+            position: absolute;
+            right: 0;
+            margin-top:5px;
+            font-size: 13px;
+        }
+      }
+      .blog__atitle {
+        margin-top: 50px;
+        font-size: 20px;
+        font-weight: bold;
+        a {
+          color: #9A7575;
+        }
+      }
+      .blog__desc {
+        margin-top: 20px;
+        font-size: 13px;
+        color: rgb(51, 51, 51);
+        a {
+          margin-top: 10px;
+          color: rgb(51, 51, 51);
+        }
+      }
+    }
+  }
+  };
+  
+  
+  /*******************
+  * front main contact
+  *******************/
+  .contact {
+    background: #FAFAFA;
+    text-align: center;
+    height: 750px;
+    h2 {
+      text-align: center;
+      color: #9A7575;
+      font-size: 40px;
+      margin: 40px 0px 10px 0px;
+      padding: 100px 0;
+    }
+    &__title::before {
+      content: 'Contact';
+      display: block;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 80px;
+      color: #EDD5D5;
+    }
+    &__txt {
+      text-align: center;
+    }
+    .form-group{
+      margin: 30px;
+      font-size: 15px;
+  }
+  }
+  
+
+/*******************
+* single
+*******************/
+/*.catch {
+    background: url(../../img/pin.jpg) center/cover no-repeat;
+    z-index: 1;
+    height: 350px; 
+    h1 {
+        font-size: 50px;
+        text-align: center;
+        padding: 160px;
+        color: #9A7575; 
+        z-index: 2;
+    }
+}*/
+  /*.works {
+      img {
+        text-align: center;
+      }
+      p {
+          text-align: center;
+          
+          padding: 30px 30px;
+          line-height: 1.5em;
+      }
+  }*/

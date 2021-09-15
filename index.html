@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carissa's Portfolio</title>
+    <link rel="stylesheet" href="styles/css/reset.css">
+    <link rel="stylesheet" href="styles/css/style.css">
+    <!--fontsawesome読み込み-->
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <!-- ＃リンクのスムーススクロール -->
+    <script>
+        $(function () {
+            // #で始まるリンクをクリックしたら実行されます
+            $('a[href^="#"]').click(function () {
+                // スクロールの速度
+                let speed = 400; // ミリ秒で記述
+                let href = $(this).attr("href");
+                let target = $(href == "#" || href == "" ? 'html' : href);
+                let position = target.offset().top;
+                $('body,html').animate({ scrollTop: position }, speed, 'swing');
+                return false;
+            });
+        });
+    </script>
+    <script>
+        (function (d) {
+            var config = {
+                kitId: 'ajd6tov',
+                scriptTimeout: 3000,
+                async: true
+            },
+                h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+
+
+</head>
+
+<body>
+
+    <header class="header">
+        <h1 class="header__logo">
+            <a href="#">Kasumi's Portfolio</a>
+        </h1>
+        <ul class="header__navi">
+            <li>
+                <a href="#">
+                    <p class="header__navi--jpn">トップ</p>
+                    <p class="header__navi--eng">Top</p>
+                </a>
+            </li>
+            <li>
+                <a href="#concept">
+                    <p class="header__navi--jpn">コンセプト</p>
+                    <p class="header__navi--eng">Concept</p>
+                </a>
+            </li>
+            <li>
+                <a href="#works">
+                    <p class="header__navi--jpn">作品</p>
+                    <p class="header__navi--eng">Works</p>
+                </a>
+            </li>
+            <li>
+                <a href="#about">
+                    <p class="header__navi--jpn">私について</p>
+                    <p class="header__navi--eng">About</p>
+                </a>
+            </li>
+            <li>
+                <a href="#blog">
+                    <p class="header__navi--jpn">ブログ</p>
+                    <p class="header__navi--eng">Blog</p>
+                </a>
+            </li>
+            <li>
+                <a href="#contact">
+                    <p class="header__navi--jpn">お問い合わせ</p>
+                    <p class="header__navi--eng">Contact</p>
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <main>
+        <section id="top" class="top">
+            <div class="top__content">
+                <div class="top__content--txt">
+                    テキストテキスト<br>
+                    テキストテキストテキスト
+                </div>
+                <div class="top__content--btn effect">
+                    <a href="#contact"> CONTACT ME </a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="concept" class="concept">
+            <h2 class="concept__title">コンセプト</h2>
+            <div class="concept__message">
+                かすみと申します！<br>ポートフォリオをご覧いただきありがとうございます！
+            </div>
+        </section>
+
+        <section id="works" class="works">
+            <h2 class="works__title">実績紹介</h2>
+
+            <ul class="works__list">
+                <li>
+                    <a href="single.html">
+                        <div class="works__list--img">
+                            <img src="img/portfolio.png" alt="portfolio">
+                        </div>
+                        <div class="works__list--txt">
+                            <h3 class="works__list--txt--title">ポートフォリオ</h3>
+                            <p>概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="single.html">
+                        <div class="works__list--img">
+                            <img src="img/portfolio.png" alt="portfolio">
+                        </div>
+                        <div class="works__list--txt">
+                            <h3 class="works__list--txt--title">ポートフォリオ</h3>
+                            <p>概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。</p>
+                        </div>
+                    </a>
+                </li>
+
+
+            </ul>
+
+        </section>
+
+
+        <section id="about" class="about">
+            <h2 class="about__title">私について</h2>
+            <div class="about__si">
+                <div class="about__si--img">
+                    <!--img aboutme-->
+                </div>
+                <div class="about__si--txt">
+                    <dl>
+                        <dt>生年</dt>
+                        <dd>2001</dd>
+                    </dl>
+                    <dl>
+                        <dt>出身</dt>
+                        <dd>静岡</dd>
+                    </dl>
+                    <dl>
+                        <dt>趣味</dt>
+                        <dd>書道</dd>
+                    </dl>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="blog" class="blog">
+            <h2 class="blog__title">ブログ</h2>
+            <div class="blog__content">
+                <article>
+                    <div class="blog__pic">
+                        <a href="#">
+                            <img src="img/portfolio.png" alt="">
+                        </a>
+                    </div>
+                    <div class="blog__meta">
+                        <ul class="post-categories">
+                            <li><a href="#">お知らせ</a></li>
+                        </ul>
+                        <time class="blog__time" datetime="2021-00-00">2021年00月00日</time>
+                    </div>
+                    <h3 class="blog__atitle"><a href="#">タイトルタイトルタイトルタイトル</a></h2>
+                    <div class="blog__desc">
+                        <p>概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。</p>
+                        <p><a href="#">[続きを読む]</a></p>
+                    </div>
+                </article>
+                <article>
+                    <div class="blog__pic">
+                        <a href="#">
+                            <img src="img/portfolio.png" alt="">
+                        </a>
+                    </div>
+                    <div class="blog__meta">
+                        <ul class="post-categories">
+                            <li><a href="#">お知らせ</a></li>
+                        </ul>
+                        <time class="blog__time" datetime="2021-00-00">2021年00月00日</time>
+                    </div>
+                    <h3 class="blog__atitle"><a href="#">タイトルタイトルタイトルタイトル</a></h2>
+                    <div class="blog__desc">
+                        <p>概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。</p>
+                        <p><a href="#">[続きを読む]</a></p>
+                    </div>
+                </article>
+                <article>
+                    <div class="blog__pic">
+                        <a href="#">
+                            <img src="img/portfolio.png" alt="">
+                        </a>
+                    </div>
+                    <div class="blog__meta">
+                        <ul class="post-categories">
+                            <li><a href="#">お知らせ</a></li>
+                        </ul>
+                        <time class="blog__time" datetime="2021-00-00">2021年00月00日</time>
+                    </div>
+                    <h3 class="blog__atitle"><a href="#">タイトルタイトルタイトルタイトル</a></h2>
+                    <div class="blog__desc">
+                        <p>概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。概要が入ります。</p>
+                        <p><a href="#">[続きを読む]</a></p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 class="contact__title">お問い合わせ</h2>
+            <div class="contact__txt">
+                コーディング・Web制作に関するお仕事のご依頼・ご相談など
+                お気軽にお問い合わせください。<br>
+            </div>
+            <div class="contact__form">
+                /*Contact Form 利用*/
+                <div class="form-group">
+                    <label for="name" class="name">お名前</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="名前を入力してください">
+                </div>
+                <div class="form-group">
+                    <label for="name" class="mail">メールアドレス</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="メールアドレスを入力してください">
+                </div>
+                <div class="form-group">
+                    <label for="message" class="message">お問い合わせ内容</label>
+                    <textarea name="message" id="message" rows="10" class="form-control"></textarea>
+                </div>
+                <button type="submit" class="btn btn-secondary">送信する</button>
+            </div>
+            <div class="contact__twitter">
+                <a href="https://twitter.com/Celine84445144?ref_src=twsrc%5Etfw" class="twitter-follow-button"
+                    data-show-count="false">Follow @Celine84445144</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2021Carissa</p>
+    </footer>
+
+
+    　
+</body>
+
+</html>

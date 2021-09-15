@@ -1,0 +1,112 @@
+/******************
+*メディアクエリ設定
+******************/
+
+$sp: 767px;  // スマホ
+@mixin sp {
+    @media (max-width: ($sp)) {
+        @content;
+    }
+}
+
+@include sp {
+
+
+
+/*******************
+* front main works
+*******************/
+
+.works__list {
+        display: flex; 
+        flex-direction: column;
+    
+    li {
+        width: 80%;
+            
+       
+        a {
+            .works__list--img {
+                margin: 0 auto;
+            }
+            .works__list--txt {
+
+            }
+        }
+    }
+}
+
+/*******************
+* front main blog
+*******************/
+
+.blog { 
+    height: 1500px;
+    h2 {
+        text-align: center;
+        color: #9A7575;
+        font-size: 40px;
+        margin: 40px 0px 10px 0px;
+        padding: 100px 0;
+      }
+      &__title::before {
+        content: 'Blog';
+        display: block;
+        font-family: 'Noto Serif JP', serif;
+        font-size: 80px;
+        color: #EDD5D5;
+      }
+    .blog__content {
+        display: flex; 
+        flex-direction: column;
+        width: 80%;
+        article {
+        
+            .blog__pic {
+            }
+            .blog__meta {
+            position: relative;
+            .post-categories {
+                position: absolute;
+                left: 0;
+                border: 1px solid;
+                border-color: #DEB8B8;
+                border-radius: 3px;
+            
+                a {
+                    color: #DEB8B8;
+                    font-size: 13px;
+                    padding: 8px;
+                }
+            }
+            .blog__time {
+                position: absolute;
+                right: 0;
+                margin-top:5px;
+                font-size: 13px;
+            }
+            .blog__atitle {
+                margin-top: 50px;
+                font-size: 20px;
+                font-weight: bold;
+                a {
+                    color: #9A7575;
+                }
+            }
+            .blog__desc {
+                margin-top: 20px;
+                font-size: 13px;
+                color: rgb(51, 51, 51);
+                a {
+                    margin-top: 10px;
+                    color: rgb(51, 51, 51);
+                }
+            }
+        }
+        
+      }
+}
+}
+
+
+};
