@@ -247,24 +247,43 @@ img {
   height: 850px;
   background: #FAFAFA; }
   .about h2 {
+    /*position: absolute;
+        color: #9A7575;
+        font-size: 40px;
+        margin: 40px 240px 40px auto;
+        padding: 80px 0;
+        width: 80%;
+        text-align: right;*/
     position: absolute;
     color: #9A7575;
     font-size: 40px;
     margin: 40px 240px 40px auto;
+    margin-left: auto;
     padding: 80px 0;
     width: 80%;
     text-align: right; }
   .about__title::after {
-    float: right;
+    /*float: right;
+      width: 80%;
+      content: 'About Me';
+      display: block;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 80px;
+      color: #EDD5D5;
+      writing-mode: vertical-rl;*/
+    position: relative;
+    right: -70px;
+    top: -33px;
     width: 80%;
     content: 'About Me';
     display: block;
+    margin-left: auto;
     font-family: 'Noto Serif JP', serif;
     font-size: 80px;
     color: #EDD5D5;
     -webkit-writing-mode: vertical-rl;
-        -ms-writing-mode: tb-rl;
-            writing-mode: vertical-rl; }
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl; }
   .about__si {
     height: 300px;
     margin-top: 200px;

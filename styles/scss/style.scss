@@ -152,24 +152,45 @@ $pc: 768px; // PC
     background: #FAFAFA;
   
     h2 {
+        /*position: absolute;
+        color: #9A7575;
+        font-size: 40px;
+        margin: 40px 240px 40px auto;
+        padding: 80px 0;
+        width: 80%;
+        text-align: right;*/
         position: absolute;
         color: #9A7575;
         font-size: 40px;
         margin: 40px 240px 40px auto;
+        margin-left:auto;
         padding: 80px 0;
         width: 80%;
         text-align: right;
         
     }
     &__title::after {
-      float: right;
+      /*float: right;
       width: 80%;
       content: 'About Me';
       display: block;
       font-family: 'Noto Serif JP', serif;
       font-size: 80px;
       color: #EDD5D5;
-      writing-mode: vertical-rl;
+      writing-mode: vertical-rl;*/
+      position: relative;
+      right: -70px;
+      top: -33px;
+      width: 80%;
+      content: 'About Me';
+      display: block;
+      margin-left:auto;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 80px;
+      color: #EDD5D5;
+      -webkit-writing-mode: vertical-rl;
+          -ms-writing-mode: tb-rl;
+              writing-mode: vertical-rl;
   }
       &__si {
       height: 300px;
@@ -237,38 +258,37 @@ $pc: 768px; // PC
                 left: 0;
                 border: 1px solid;
 	              border-color: #DEB8B8;
-                border-radius: 3px;
-          
-            a {
-                color: #DEB8B8;
-                font-size: 13px;
-                padding: 8px;
-              }
+                border-radius: 3px;  
+                a {
+                    color: #DEB8B8;
+                    font-size: 13px;
+                    padding: 8px;
+                  }
             }
-        .blog__time {
-            position: absolute;
-            right: 0;
-            margin-top:5px;
+            .blog__time {
+                position: absolute;
+                right: 0;
+                margin-top:5px;
+                font-size: 13px;
+            }
+        }
+        .blog__atitle {
+            margin-top: 50px;
+            font-size: 20px;
+            font-weight: bold;
+            a {
+                color: #9A7575;
+            }
+        }
+        .blog__desc {
+            margin-top: 20px;
             font-size: 13px;
+            color: rgb(51, 51, 51);
+            a {
+                margin-top: 10px;
+                color: rgb(51, 51, 51);
+            }
         }
-      }
-      .blog__atitle {
-        margin-top: 50px;
-        font-size: 20px;
-        font-weight: bold;
-        a {
-          color: #9A7575;
-        }
-      }
-      .blog__desc {
-        margin-top: 20px;
-        font-size: 13px;
-        color: rgb(51, 51, 51);
-        a {
-          margin-top: 10px;
-          color: rgb(51, 51, 51);
-        }
-      }
     }
   }
   };
