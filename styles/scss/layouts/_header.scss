@@ -1,3 +1,15 @@
+$pc: 768px; // PC
+@mixin pc {
+    @media (min-width: ($pc)) {
+        @content;
+    }
+}
+$sp: 767px;  // スマホ
+@mixin sp {
+    @media (max-width: ($sp)) {
+        @content;
+    }
+}
 /*******************
   * front header 
   *******************/
@@ -9,32 +21,48 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    z-index: 1;
+    z-index: 4;
     padding: 40px 40px;
     background: #EDD5D5;
-    
-    &__logo {
-        display: flex;
+    @include pc {
+        &__logo {
+            display: flex;
+            a {
+                color: #9A7575;
+            }
+        }
+        &__navi {
+            display: flex;
+            li:not(:last-child) {
+                margin-right: 14px;
+            }
+            a {
+                color: #9A7575;
+        
+                .header__navi--jpn {
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+                .header__navi--eng {
+                    font-size: 12px;
+                    text-align: center;
+                }
+            }
+        }
+        
+    };
+
+    @include sp {
+      &__logo {
+        margin-left: 0;
+        padding-left: 0;
         a {
           color: #9A7575;
         }
       }
-    &__navi {
-      display: flex;
-      li:not(:last-child) {
-        margin-right: 14px;
+      &__navi {
+        display: none;
       }
-      a {
-        color: #9A7575;
-        
-        .header__navi--jpn {
-          font-size: 18px;
-          font-weight: bold;
-        }
-        .header__navi--eng {
-          font-size: 12px;
-          text-align: center;
-        }
-      }
-    }
+    };
+    
   }

@@ -12,29 +12,133 @@ $sp: 767px;  // スマホ
 @include sp {
 
 
+/*******************
+* front main concept
+*******************/
+.concept {
+    h2 {
+        text-align: center;
+        color: #9A7575;
+        font-size: 36px;
+        margin: 10px 0px 10px 0px;
+        padding: 40px 0;
+    }
+    &__title::before {
+        content: 'Concept';
+        display: block;
+        font-family: 'Noto Serif JP', serif;
+        font-size: 64px;
+        color: #EDD5D5;
+      }
+}
 
 /*******************
 * front main works
 *******************/
-
-.works__list {
-        display: flex; 
-        flex-direction: column;
+.works {
+    height: 750px;
+    padding: 100px 0;
     
-    li {
-        width: 80%;
-            
-       
-        a {
-            .works__list--img {
-                margin: 0 auto;
+    h2 {
+      color: #9A7575;
+      font-size: 40px;
+      width: 100%;
+    }
+    &__title::after {
+        content: 'Works';
+        display: block;
+        font-family: 'Noto Serif JP', serif;
+        font-size: 64px;
+        color: #EDD5D5;
+        writing-mode: vertical-rl;
+        float: left;
+        
+    }
+    &__list {
+        display: flex; 
+        flex-direction: column; 
+        margin-top: 100px;     
+      
+        li { 
+            width: 88%;
+            margin-bottom: 30px;
+            a {
+                .works__list--img {
+                    margin: 0 auto;
+                }
+                .works__list--txt {
+                    &--title {
+                        font-size: 20px;
+                        color: #9A7575;
+                        margin-top: 10px;
+                        text-align: center;
+                      }
+                      p {
+                        color:rgb(51, 51, 51);
+                        margin-top: 20px;
+                      }
+                }
             }
-            .works__list--txt {
+          
+        }
+    }
+}
 
+/*******************
+* front main about
+*******************/
+.about {
+    h2 {
+        position: absolute;
+        color: #9A7575;
+        font-size: 40px;
+        margin: 40px 240px 40px auto;
+        margin-left:auto;
+        padding: 80px 0;
+        width: 84%;
+        text-align: right;
+        z-index: 3;
+        
+        
+    }
+    &__title::after {
+        z-index: 1;
+        position: relative;
+        right: -54px;
+        top: -33px;
+        width: 80%;
+        content: 'About Me';
+        display: block;
+        margin-left:auto;
+        font-family: 'Noto Serif JP', serif;
+        font-size: 64px;
+        color: #EDD5D5;
+        -webkit-writing-mode: vertical-rl;
+            -ms-writing-mode: tb-rl;
+                writing-mode: vertical-rl;
+    }
+    &__si {
+        height: 300px;
+        margin-top: 200px;
+        padding-top: 200px;
+        &--img {
+            position: relative;
+            z-index: 2;
+            background: url(../../img/aboutme.jpg) center/cover no-repeat; 
+            height: 300px;
+            width: 60%;
+        }
+        &--txt {
+            color: #4b4b4b;
+            width: 60%;
+            dl {
+                margin-top :30px;
+                display: flex;
             }
         }
     }
 }
+
 
 /*******************
 * front main blog
@@ -45,7 +149,7 @@ $sp: 767px;  // スマホ
     h2 {
         text-align: center;
         color: #9A7575;
-        font-size: 40px;
+        font-size: 36px;
         margin: 40px 0px 10px 0px;
         padding: 100px 0;
       }
@@ -53,7 +157,7 @@ $sp: 767px;  // スマホ
         content: 'Blog';
         display: block;
         font-family: 'Noto Serif JP', serif;
-        font-size: 80px;
+        font-size: 64px;
         color: #EDD5D5;
       }
     .blog__content {
@@ -61,7 +165,7 @@ $sp: 767px;  // スマホ
         flex-direction: column;
         width: 80%;
         article {
-        
+            margin-bottom: 40px;
             .blog__pic {
             }
             .blog__meta {
@@ -104,9 +208,32 @@ $sp: 767px;  // スマホ
                 }
             }
         
+        }
     }
 }
-}
 
+/*******************
+* front main contact
+*******************/
+.contact {
+    background: #FAFAFA;
+    text-align: center;
+    height: 750px;
+    
+      h2 {
+          text-align: center;
+          color: #9A7575;
+          font-size: 36px;
+          margin: 40px 0px 10px 0px;
+          padding: 100px 0;
+      }
+      &__title::before {
+          content: 'Contact';
+          display: block;
+          font-family: 'Noto Serif JP', serif;
+          font-size: 64px;
+          color: #EDD5D5;
+      }
+}
 
 };
